@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+        php: 7.3
+    commands:
+      - echo "Empezamos la instalacion"
+  pre_build:
+    commands:
+      - echo "Empezamos la fase de compilacion"
+  build:
+    commands:
+      - echo "Vamos a realizar una prueba"
+      - grep -Fq "tardes" index.php
+  post_build:
+    commands:
+      - echo "Empezamos la fase de post-compilacion"
